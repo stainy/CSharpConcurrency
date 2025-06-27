@@ -1,7 +1,14 @@
 ﻿
+using System.Diagnostics;
+
 internal class Chapter4
 {
-    internal static void GetIncorrectValue()
+    internal static void DoWork()
+    {
+        GetIncorrectValue();
+        GetCorrectValue();
+    }
+    private static void GetIncorrectValue()
     {
         var theValue = 0;
         var threads = new Thread[2];
@@ -27,7 +34,7 @@ internal class Chapter4
         Console.WriteLine(theValue);
         }
     
-    internal static void GetCorrectValue()
+    private static void GetCorrectValue()
     {
         var theValue = 0;
         var threads = new Thread[2];
