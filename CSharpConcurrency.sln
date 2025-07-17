@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadTestClientAsync", "Book
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadTestServerOneRequestPerThread", "Book Samples\LoadTestServerOneRequestPerThread\LoadTestServerOneRequestPerThread.csproj", "{E508FD20-EB5A-7E3F-785E-250AFD2B3C55}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadTestServerAsync", "Book Samples\LoadTestServerAsync\LoadTestServerAsync.csproj", "{572116C5-2BD4-BF63-98D2-9257A640AC47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E508FD20-EB5A-7E3F-785E-250AFD2B3C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E508FD20-EB5A-7E3F-785E-250AFD2B3C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E508FD20-EB5A-7E3F-785E-250AFD2B3C55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{572116C5-2BD4-BF63-98D2-9257A640AC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{572116C5-2BD4-BF63-98D2-9257A640AC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{572116C5-2BD4-BF63-98D2-9257A640AC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{572116C5-2BD4-BF63-98D2-9257A640AC47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

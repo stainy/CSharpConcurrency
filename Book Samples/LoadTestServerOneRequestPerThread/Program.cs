@@ -9,8 +9,9 @@ listenSocket.Listen(50);
 while (true)
 {
 	var connection = listenSocket.Accept();
-	
-	var thread = new Thread(() =>
+
+    // ❶ Handles connection in a new thread
+    var thread = new Thread(() =>
 	{
 		using var file = new FileStream(@"somefile.bin", FileMode.Open, FileAccess.Read);
 		
@@ -20,8 +21,9 @@ while (true)
 		{
 			var read = file.Read(buffer, 0, buffer.Length);
 			if ((read) != 0)
-			{
-				connection.Send(
+            {
+                // ❷ Sends file content to client
+                connection.Send(
 				  new ArraySegment<byte>(buffer, 0, read),
 				  SocketFlags.None);
 			}
@@ -34,5 +36,6 @@ while (true)
 		}
 	});
 	
-	thread.Start();
+    // ❸ Don’t forget to start the thread.
+    thread.Start();
 }
